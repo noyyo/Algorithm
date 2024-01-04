@@ -1,20 +1,25 @@
 using System;
+using System.Text;
 
 public class Example
 {
     public static void Main()
     {
-        string input = Console.ReadLine();
-        string[] inputs = input.Split(' ');
-        int n = int.Parse(inputs[0]);
-        int m = int.Parse(inputs[1]);
-        for (int i = 0; i < m; i++)
+        String[] input;
+
+        Console.Clear();
+        input = Console.ReadLine().Split(' ');
+
+        int n = Int32.Parse(input[0]);
+        int m = Int32.Parse(input[1]);
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < n; i++)
         {
-            for (int j = 0; j < n; j++)
-            {
-                Console.Write('*');
-            }
-            Console.WriteLine();
+            sb.Append("*");
+        }
+        for (int j = 0; j < m; j++)
+        {
+            Console.WriteLine(sb.ToString());
         }
     }
 }
