@@ -17,8 +17,9 @@ class Solution
         {
             while (coinValues[index] > k)
                 index--;
-            k -= coinValues[index];
-            coin++;
+            int quotient = k / coinValues[index];
+            k -=  quotient * coinValues[index];
+            coin += quotient;
         }
         Console.Write(coin);
     }
